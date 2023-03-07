@@ -2,6 +2,7 @@ var http    = require('http')
 var axios   = require('axios')
 var fs      = require('fs')
 var mypages = require('./mypages')
+var ds      = require('./distsexo')
 
 http.createServer( function(req, res) {
     var d = new Date().toISOString().substring(0,16)
@@ -20,6 +21,21 @@ http.createServer( function(req, res) {
         })
     }
 
+    else if( req.url == '/sexo') {
+        axios.get('http://localhost:3000/pessoas',{
+        }).then( function(resp) {
+            var pessoas = resp.data
+            console.log("recuperei " + pessoas.length + " registos")
+            res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'})
+            res.end(ds.genDistSexo(pessoas,d))
+        })
+        .catch(erro => {
+            console.log("erro= "+ erro)
+            res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'})
+            res.end("<p>ERRO" + erro + "</p>")
+        })
+    }
+
     else if( req.url == '/sexomas') {
         axios.get('http://localhost:3000/pessoas?sexo=masculino',{
         }).then( function(resp) {
@@ -34,6 +50,7 @@ http.createServer( function(req, res) {
             res.end("<p>ERRO" + erro + "</p>")
         })
     }
+    
     else if( req.url == '/sexofem') {
         axios.get('http://localhost:3000/pessoas?sexo=feminino',{
         }).then( function(resp) {
