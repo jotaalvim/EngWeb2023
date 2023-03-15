@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "rubik"
+    },
+    {
+      "id": 2,
+      "nome": "maria"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 9,
+      "author": "jose",
+      "date": "67-02-2023",
+      "description": "lavar pratos",
+      "completed": "checked"
+    },
+    {
+      "id": 10,
+      "author": "rui",
+      "description": "estudar",
+      "date": "12-02-2023",
+      "completed": true
+    },
+    {
+      "id": "45",
+      "author": "jota",
+      "date": "12-2-2025",
+      "description": "ir ginásio asdfgh",
+      "completed": "checked"
+    },
+    {
+      "id": "12",
+      "author": "asd",
+      "date": "amanha",
+      "description": "lallalala",
+      "completed": 0
+    },
+    {
+      "id": "123",
+      "author": "a",
+      "date": "a",
+      "description": "a",
+      "completed": "checked"
+    },
+    {
+      "id": "179",
+      "author": "jesus",
+      "date": "15-05-2002",
+      "description": "fazer comida",
+      "completed": "checked"
+    },
+    {
+      "id": "pe1BhnJ",
+      "author": "jk",
+      "date": "",
+      "description": ""
+    },
+    {
+      "id": "9876",
+      "author": "",
+      "date": "",
+      "description": ""
+    }
+  ]
+}
